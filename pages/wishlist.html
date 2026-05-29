@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Wishlist — MODE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="header-logo">M<span>ODE</span></a>
+      <nav class="header-nav">
+        <a href="category.html?cat=new-arrivals">New Arrivals</a>
+        <a href="category.html?cat=trending">Trending</a>
+        <a href="category.html?cat=sale">Sale</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-icon" data-search aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+        <a href="wishlist.html" class="btn-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+        <button class="btn-icon" data-cart-toggle aria-label="Cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="cart-count" id="cart-count">0</span></button>
+        <a href="profile.html" class="btn-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wishlist-page">
+    <div class="container">
+      <div class="category-header">
+        <h1 class="category-title">Wishlist</h1>
+        <p class="category-count" id="wishlist-count">0 saved items</p>
+      </div>
+      <div class="grid-4" id="wishlist-grid"></div>
+    </div>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Home</span></a>
+    <a href="category.html?cat=new-arrivals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span>Shop</span></a>
+    <a href="wishlist.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span>Wishlist</span></a>
+    <a href="#" data-cart-toggle><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span>Cart</span></a>
+    <a href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Profile</span></a>
+  </nav>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header"><h3 class="cart-title">Cart</h3><button class="btn-icon" onclick="cart.close()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="cart-items"></div>
+    <div class="cart-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><p>Your cart is empty</p></div>
+    <div class="cart-footer"><div class="cart-subtotal"><span class="cart-subtotal-label">Subtotal</span><span class="cart-subtotal-value">$0</span></div><a href="checkout.html" class="btn btn-primary" style="width:100%;text-align:center;">Checkout</a></div>
+  </div>
+
+  <div class="search-overlay" id="search-overlay">
+    <button class="btn-icon search-close" onclick="search.close()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="search-container">
+      <div class="search-input-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input class="search-input" id="search-input" type="text" placeholder="Search..." autocomplete="off"></div>
+      <div id="search-suggestions"><div class="search-suggestions"><p class="search-suggestions-title">Trending</p><div class="search-trending" id="search-trending"></div></div></div>
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </div>
+
+  <script src="../js/products.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/wishlist.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      function renderWishlist() {
+        const grid = document.getElementById('wishlist-grid');
+        const count = document.getElementById('wishlist-count');
+        const items = wishlist.items;
+        count.textContent = `${items.length} saved items`;
+        if (items.length === 0) {
+          grid.innerHTML = '<p style="color:var(--text-muted);padding:60px 0;text-align:center;grid-column:1/-1;">Your wishlist is empty</p>';
+          return;
+        }
+        const products = items.map(id => getProductById(id)).filter(Boolean);
+        grid.innerHTML = products.map(p => renderProductCard(p)).join('');
+      }
+
+      renderWishlist();
+      document.addEventListener('wishlist-update', renderWishlist);
+    });
+  </script>
+</body>
+</html>

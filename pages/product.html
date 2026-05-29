@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Product — MODE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="header-logo">M<span>ODE</span></a>
+      <nav class="header-nav">
+        <a href="category.html?cat=new-arrivals">New Arrivals</a>
+        <a href="category.html?cat=trending">Trending</a>
+        <a href="category.html?cat=sale">Sale</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-icon" data-search aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="wishlist.html" class="btn-icon" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </a>
+        <button class="btn-icon" data-cart-toggle aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <a href="profile.html" class="btn-icon" aria-label="Profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-page">
+    <div class="container">
+      <div class="product-layout" id="product-content">
+        <div class="product-gallery" id="product-gallery"></div>
+        <div class="product-info" id="product-info"></div>
+      </div>
+
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <p class="text-small" style="margin-bottom:8px;">Complete Your Look</p>
+            <h2 class="heading-md">Complete the Look</h2>
+          </div>
+        </div>
+        <div id="complete-look"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <p class="text-small" style="margin-bottom:8px;">You May Also Like</p>
+            <h2 class="heading-md">Similar Products</h2>
+          </div>
+        </div>
+        <div class="scroll-container" id="similar-products"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="../index.html" class="header-logo" style="font-size:1.5rem;">M<span>ODE</span></a>
+          <p class="footer-brand-desc">Premium fashion destination for the modern wardrobe.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="category.html?cat=new-arrivals">New Arrivals</a></li>
+            <li><a href="category.html?cat=trending">Trending</a></li>
+            <li><a href="category.html?cat=sale">Sale</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Size Guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MODE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav">
+    <a href="../index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="category.html?cat=new-arrivals">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      <span>Shop</span>
+    </a>
+    <a href="wishlist.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <span>Wishlist</span>
+    </a>
+    <a href="#" data-cart-toggle>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span>Cart</span>
+    </a>
+    <a href="profile.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Profile</span>
+    </a>
+  </nav>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3 class="cart-title">Cart</h3>
+      <button class="btn-icon" onclick="cart.close()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-empty">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <p>Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span class="cart-subtotal-label">Subtotal</span>
+        <span class="cart-subtotal-value">$0</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary" style="width:100%;text-align:center;">Checkout</a>
+    </div>
+  </div>
+
+  <div class="search-overlay" id="search-overlay">
+    <button class="btn-icon search-close" onclick="search.close()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="search-container">
+      <div class="search-input-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input class="search-input" id="search-input" type="text" placeholder="Search..." autocomplete="off">
+      </div>
+      <div id="search-suggestions">
+        <div class="search-suggestions">
+          <p class="search-suggestions-title">Trending</p>
+          <div class="search-trending" id="search-trending"></div>
+        </div>
+      </div>
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </div>
+
+  <script src="../js/products.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/wishlist.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const id = parseInt(getUrlParam('id'));
+      const product = getProductById(id);
+
+      if (!product) {
+        document.getElementById('product-content').innerHTML = '<p style="color:var(--text-muted);padding:60px 0;text-align:center;">Product not found</p>';
+        return;
+      }
+
+      document.title = `${product.name} — MODE`;
+
+      const galleryEl = document.getElementById('product-gallery');
+      const isWishlisted = wishlist.has(product.id);
+      galleryEl.innerHTML = `
+        <img class="product-main-image" id="main-image" src="${product.images[0]}" alt="${product.name}">
+        <div class="product-thumbnails" id="thumbnails">
+          ${product.images.map((img, i) =>
+            `<img src="${img}" alt="${product.name} ${i+1}" class="${i === 0 ? 'active' : ''}" onclick="changeImage(this.src, this)" loading="lazy">`
+          ).join('')}
+        </div>
+      `;
+
+      const infoEl = document.getElementById('product-info');
+      infoEl.innerHTML = `
+        <div class="product-brand">${product.brand}</div>
+        <h1 class="product-name">${product.name}</h1>
+        <div class="product-price">
+          ${product.oldPrice ? `<span class="product-price-old">$${product.oldPrice}</span> ` : ''}
+          $${product.price}
+        </div>
+        <p class="product-description">${product.description}</p>
+        <div class="size-selector">
+          <div class="size-selector-title">
+            <span>Size</span>
+            <span class="size-guide">Size Guide</span>
+          </div>
+          <div class="size-options" id="size-options">
+            ${product.sizes.map(s =>
+              `<button class="size-option" data-size="${s}">${s}</button>`
+            ).join('')}
+          </div>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-primary btn-lg" id="add-to-cart">Add to Cart — $${product.price}</button>
+          <button class="btn-icon wishlist-btn ${isWishlisted ? 'active' : ''}" id="wishlist-btn" data-product-id="${product.id}" style="border:1px solid var(--border-light);width:56px;height:56px;border-radius:var(--radius-sm);flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="${isWishlisted ? '#ff3b3b' : 'none'}" stroke="${isWishlisted ? '#ff3b3b' : 'currentColor'}" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        <div class="product-details">
+          <div class="product-detail-item"><span>Category</span><span>${product.category}</span></div>
+          <div class="product-detail-item"><span>Colors</span><span>${product.colors.join(', ')}</span></div>
+          <div class="product-detail-item"><span>Material</span><span>Premium quality</span></div>
+        </div>
+      `;
+
+      let selectedSize = product.sizes[1] || product.sizes[0];
+      document.querySelectorAll('.size-option').forEach(btn => {
+        if (btn.dataset.size === selectedSize) btn.classList.add('selected');
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('.size-option').forEach(b => b.classList.remove('selected'));
+          this.classList.add('selected');
+          selectedSize = this.dataset.size;
+          document.getElementById('add-to-cart').textContent = `Add to Cart — $${product.price}`;
+        });
+      });
+
+      document.getElementById('add-to-cart').addEventListener('click', () => {
+        cart.add(product, selectedSize);
+      });
+
+      document.getElementById('wishlist-btn').addEventListener('click', function() {
+        const isActive = wishlist.toggle(product.id);
+        const svg = this.querySelector('svg');
+        svg.setAttribute('fill', isActive ? '#ff3b3b' : 'none');
+        svg.setAttribute('stroke', isActive ? '#ff3b3b' : 'currentColor');
+      });
+
+      window.changeImage = function(src, el) {
+        document.getElementById('main-image').src = src;
+        document.querySelectorAll('.product-thumbnails img').forEach(i => i.classList.remove('active'));
+        if (el) el.classList.add('active');
+      };
+
+      const similar = getRecommendedProducts(product.id, 6);
+      renderProductSlider(similar, 'similar-products');
+
+      const lookItems = getCompleteTheLook(product.id);
+      const lookEl = document.getElementById('complete-look');
+      if (lookItems.length) {
+        lookEl.innerHTML = '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;">' +
+          lookItems.map(item => `
+            <div class="look-card" onclick="window.location.href='product.html?id=${item.id}'">
+              <img src="${item.images[0]}" alt="${item.name}" loading="lazy">
+              <div class="look-card-info">
+                <h4>${item.name}</h4>
+                <p>${item.brand} — $${item.price}</p>
+              </div>
+            </div>
+          `).join('') +
+        '</div>';
+      }
+    });
+  </script>
+</body>
+</html>
